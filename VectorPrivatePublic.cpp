@@ -9,8 +9,12 @@ private:
     float z;
 
 public:
-    Vector() : x(5.4), y(3.21), z(2.45555)
-    {}
+    void SetAll(float _x, float _y, float _z)
+    {
+        x = _x;
+        y = _y;
+        z = _z;
+    }
 
     float Get_x()
     {
@@ -30,6 +34,7 @@ public:
 int main()
 {
     Vector temp;
+    temp.SetAll(5.21, 3.6894, 9.3563);
     cout << temp.Get_x() << endl;
     cout << temp.Get_y() << endl;
     cout << temp.Get_z() << endl;
