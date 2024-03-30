@@ -1,41 +1,43 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 class Vector
 {
 private:
-    float x;
-    float y;
-    float z;
+    int x;
+    int y;
+    int z;
 
 public:
-    void SetAll(float _x, float _y, float _z)
+    std::vector<int> vectornumbers;
+    std::vector<int> vectornumbers1;
+    std::vector<int> vectornumbers2;
+    void SetAll()
     {
-        x = _x;
-        y = _y;
-        z = _z;
+        for(x = 0; x < 9; x++) 
+        {
+            vectornumbers.push_back(x);
+        }
+        for(y = 0; y < 19; y++) 
+        {
+            vectornumbers1.push_back(y);
+        }
+        for(z = 0; z < 49; z++) 
+        {
+            vectornumbers2.push_back(z);
+        }
     }
-
-    float Get_x()
+    void GetVector()
     {
-        return x;
+        cout << vectornumbers.size() <<"\t" << vectornumbers1.size() << "\t" << vectornumbers2.size() << "\t";
     }
-    float Get_y()
-    {
-        return y;
-    }
-    float Get_z()
-    {
-        return z;
-    }
-
 };
 
 int main()
 {
-    Vector temp;
-    temp.SetAll(5.21, 3.6894, 9.3563);
-    cout << temp.Get_x() << endl;
-    cout << temp.Get_y() << endl;
-    cout << temp.Get_z() << endl;
+    Vector temp{  };
+    temp.SetAll();
+    temp.GetVector();
 }
