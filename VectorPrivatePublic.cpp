@@ -31,7 +31,12 @@ public:
     }
     void GetVector()
     {
-        cout << vectornumbers.size() <<"\t" << vectornumbers1.size() << "\t" << vectornumbers2.size() << "\t";
+        cout << x <<"\t" << y << "\t" << z << endl;
+    }
+    void Show()
+    {
+        float length = sqrt(x * x + y * y + z * z);
+        cout << "Length: " << length;
     }
 };
 
@@ -40,4 +45,5 @@ int main()
     Vector temp{  };
     temp.SetAll();
     temp.GetVector();
+    temp.Show();
 }
